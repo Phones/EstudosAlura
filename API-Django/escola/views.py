@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/mnt/c/Users/paulo.campos/Desktop/EstudosAlura/API-Django/escola/')
+sys.path.append('/home/paulo/Desktop/EstudosAlura/API-Django/escola')
 from django.db.models.query import QuerySet
 from rest_framework import viewsets
 from escola.models import Aluno, Curso
