@@ -2,8 +2,8 @@ import sys
 sys.path.append('/home/paulo/Desktop/EstudosAlura/API-Django/escola')
 from django.db.models.query import QuerySet
 from rest_framework import viewsets
-from escola.models import Aluno, Curso
-from serializer import AlunoSerializer, CursoSerializer
+from escola.models import Aluno, Curso, Matricula
+from serializer import AlunoSerializer, CursoSerializer, MatriculaSerializer
 
 class AlunoViewSet(viewsets.ModelViewSet):
     """Exibindo todos os alunos e alunas"""
@@ -15,3 +15,8 @@ class CursosViewSet(viewsets.ModelViewSet):
     queryset = Curso.objects.all()
     serializer_class = CursoSerializer
 
+
+class MatriculasViewSet(viewsets.ModelViewSet):
+    """Exibindo todas as matriculas"""
+    queryset = Matricula.objects.all()
+    serializer_class = MatriculaSerializer
