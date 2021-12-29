@@ -17,3 +17,8 @@ class MatriculaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Matricula
         exclude = []
+
+class ListaMatriculasAlunoSerializer(serializers.ModelSerializer):
+    """Listando todos todas as mátriculas"""
+    queryset = Matricula.objects.all()
+    serializer_class = MatriculaSerializer
