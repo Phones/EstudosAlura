@@ -41,6 +41,7 @@ class ListaMAtriculaAlunos(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
 
 class ListaAlunosMatriculados(generics.ListAPIView):
+    """Listando todos alunos matriculados em um curso"""
     def get_queryset(self):
         queryset = Matricula.objects.filter(curso_id=self.kwargs['pk'])
         return queryset
@@ -48,4 +49,3 @@ class ListaAlunosMatriculados(generics.ListAPIView):
     serializer_class = ListaAlunosMatriculadosEmUmCurso
     authentication_classes = [BasicAuthentication]
     permission_classes = [IsAuthenticated]
-    
