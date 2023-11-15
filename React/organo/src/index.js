@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// É nesse arquivo que a aplicação começa
 
+// Busca o elemento root
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// Renderiza o app. O primeiro componente que vai ser renderizado na aplicação
 root.render(
+  //  StrictMode é um componente que ajuda a escrever códigos mais seguros. Em proddução
+  // não faz nada, mas durante o desenvolvimento ajuda a encontrar problemas na aplicação
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
