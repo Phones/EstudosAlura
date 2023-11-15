@@ -127,3 +127,27 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+React/organo/node_modules
+React/organo/.pnp
+React/organo/.pnp.js
+
+# testing
+React/organo/coverage
+
+# production
+React/organo/build
+
+# misc
+React/organo/.DS_Store
+React/organo/.env.local
+React/organo/.env.development.local
+React/organo/.env.test.local
+React/organo/.env.production.local
+
+React/organo/npm-debug.log*
+React/organo/yarn-debug.log*
+React/organo/yarn-error.log*
